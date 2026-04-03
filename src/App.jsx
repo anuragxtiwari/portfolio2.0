@@ -5,6 +5,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import MusicToggle from "./components/MusicToggle";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Projects />
       <Contact />
       <Footer />
+      <MusicToggle />
     </div>
   )
 }

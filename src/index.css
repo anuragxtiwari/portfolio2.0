@@ -9,3 +9,100 @@ html {
 body {
   font-family: system-ui, sans-serif;
 }
+
+.hero-pattern {
+  background-image: radial-gradient(circle, rgba(0,0,0,0.03) 1px, transparent 3px);
+  background-size: 20px 20px;
+}
+
+.about-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0,0,0,0.02),
+    rgba(0,0,0,0.02) 1px,
+    transparent 1px,
+    transparent 20px
+  );
+}
+
+/* Skills Section Premium Background */
+#skills {
+  /* Soft gradient background */
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 50%, #f3f4f6 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle diagonal pattern overlay */
+#skills::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0,0,0,0.01) 1px,
+    transparent 1px,
+    transparent 30px
+  );
+}
+
+/* Skills content wrapper above the pattern */
+#skills > div {
+  position: relative;
+  z-index: 10;
+}
+
+/* Category headings */
+#skills h3 {
+  color: #1f2937; /* gray-800 */
+  font-weight: 600;
+  font-size: 1.25rem; /* md */
+  margin-bottom: 0.75rem;
+}
+
+/* Skill pills */
+#skills span {
+  background-color: white;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5e7eb; /* gray-200 */
+  transition: all 0.3s ease;
+}
+
+
+/* Contact Section Paper Planes Animation */
+#contact {
+  position: relative;
+  overflow: hidden;
+}
+
+#contact::before,
+#contact::after,
+#contact .paper-plane {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%23007BFF" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>') no-repeat center center;
+  background-size: contain;
+  opacity: 0.5;
+  top: 0;
+  left: -50px;
+  animation-name: fly;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Multiple planes with random delays */
+#contact .plane1 { animation-duration: 12s; animation-delay: 0s; top: 10%; }
+#contact .plane2 { animation-duration: 10s; animation-delay: 2s; top: 25%; }
+#contact .plane3 { animation-duration: 14s; animation-delay: 4s; top: 40%; }
+#contact .plane4 { animation-duration: 11s; animation-delay: 1s; top: 55%; }
+#contact .plane5 { animation-duration: 13s; animation-delay: 3s; top: 70%; }
+
+@keyframes fly {
+  0% { transform: translateX(0) rotate(0deg); opacity: 0.5; }
+  50% { transform: translateX(50vw) rotate(10deg); opacity: 0.7; }
+  100% { transform: translateX(100vw) rotate(0deg); opacity: 0.5; }
+}
