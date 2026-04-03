@@ -83,7 +83,7 @@ const Navbar = () => {
           className="flex items-center"
         >
           <img
-            src="src\assets\logo.png" // put your PNG in public folder or adjust path
+            src="public\logo.png" 
             alt="Anurag Logo"
             className="h-10 md:h-12 object-contain"
           />
